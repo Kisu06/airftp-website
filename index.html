@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air FTP Server — Fast & Secure FTP Server for Android</title>
+    <meta name="description" content="Turn your Android phone into a powerful FTP/FTPS server. Transfer files wirelessly over WiFi with military-grade encryption. Free, private, no data collection.">
+    <meta name="keywords" content="FTP Server, Android FTP, FTPS, Wireless File Transfer, Air FTP">
+    <meta name="author" content="KSNXRL">
+    <meta property="og:title" content="Air FTP Server — Fast & Secure FTP Server for Android">
+    <meta property="og:description" content="Transform your Android device into a wireless file server. Fast, secure, private.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><circle cx='54' cy='54' r='50' fill='%232196F3'/><path d='M30,40 L78,40 L78,68 L30,68 Z M40,50 L68,50 L68,58 L40,58 Z' fill-rule='evenodd' fill='white'/></svg>">
+</head>
+<body>
+
+    <!-- Animated Background Particles -->
+    <div class="bg-particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">
+                <svg viewBox="0 0 108 108" fill="none">
+                    <circle cx="54" cy="54" r="50" fill="#2196F3"/>
+                    <path d="M30,40 L78,40 L78,68 L30,68 Z M40,50 L68,50 L68,58 L40,58 Z" fill-rule="evenodd" fill="white"/>
+                </svg>
+                Air FTP Server
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pro-features">Free vs Pro</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="#download" class="nav-cta">Download</a></li>
+            </ul>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-grid">
+            
+            <!-- Left: Hero Text -->
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Now Available
+                </div>
+                
+                <h1>
+                    Your Phone is Now a<br>
+                    <span class="gradient-text">Powerful FTP Server</span>
+                </h1>
+                
+                <p class="hero-desc">Transfer files wirelessly over WiFi with military-grade FTPS encryption. Fast, free, and completely private — no data ever leaves your device.</p>
+                
+                <div class="hero-actions">
+                    <a href="#download" class="btn-primary" id="heroDownloadBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download APK
+                    </a>
+                    <a href="#features" class="btn-secondary" id="heroLearnBtn">
+                        Learn More
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Private & Local</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">0 KB</div>
+                        <div class="stat-label">Data Collected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">SSL/TLS</div>
+                        <div class="stat-label">FTPS Encrypted</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right: Interactive App Preview Mockup -->
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="screen-header">
+                        <div class="screen-title">
+                            <svg viewBox="0 0 108 108" fill="none">
+                                <circle cx="54" cy="54" r="50" fill="#2196F3"/>
+                                <path d="M30,40 L78,40 L78,68 L30,68 Z M40,50 L68,50 L68,58 L40,58 Z" fill-rule="evenodd" fill="white"/>
+                            </svg>
+                            Air FTP Server
+                        </div>
+                        <!-- Settings Icon Link Simulation -->
+                        <div style="cursor: pointer; opacity: 0.8;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="screen-body">
+                        <!-- Server Status Card (Interactive) -->
+                        <div class="mock-status-card" id="mockStatusCard">
+                            <span class="status-indicator" id="mockStatusText">
+                                <span class="status-dot"></span>
+                                Server Running
+                            </span>
+                        </div>
+                        
+                        <!-- Server Details -->
+                        <div class="mock-info-card">
+                            <div class="mock-info-label">Server URL</div>
+                            <div class="mock-info-value" id="mockServerUrl">ftp://192.168.1.102:2121</div>
+                        </div>
+
+                        <!-- Credentials -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <div class="mock-info-card">
+                                <div class="mock-info-label">User ID</div>
+                                <div class="mock-info-value" style="color: white;" id="mockUser">admin</div>
+                            </div>
+                            <div class="mock-info-card">
+                                <div class="mock-info-label">Password</div>
+                                <div class="mock-info-value" style="color: white;">••••••••</div>
+                            </div>
+                        </div>
+
+                        <!-- Scan QR Connection -->
+                        <div class="mock-info-card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
+                            <div class="mock-info-label">Scan to Connect</div>
+                            <!-- Mock QR Code in SVG -->
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="white" style="opacity: 0.85;">
+                                <path d="M3 3h6v6H3zm2 2v2h2V5zm8-2h6v6h-6zm2 2v2h2V5zM3 15h6v6H3zm2 2v2h2v-2zm10-2h2v2h-2zm2 2h2v2h-2zm-2 2h2v2h-2zm4-4h2v6h-2z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Interactive Stop/Start Trigger -->
+                        <button class="mock-power-btn" id="mockPowerBtn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/>
+                            </svg>
+                        </button>
+
+                        <!-- Real-time Stats Grid -->
+                        <div class="mock-stats-grid">
+                            <div class="mock-stat-box">
+                                <div class="mock-stat-num" id="mockUpload">12.8 MB/s</div>
+                                <div class="mock-stat-lbl">Upload</div>
+                            </div>
+                            <div class="mock-stat-box">
+                                <div class="mock-stat-num" id="mockDownload">1.4 MB/s</div>
+                                <div class="mock-stat-lbl">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">Features</span>
+            <h2 class="section-title">Everything You Need in a File Server</h2>
+            <p class="section-desc">Built for speed, security, and simplicity. No bloatware, no ads, no tracking.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast Transfers</h3>
+                <p>Powered by Apache FTP Server for blazing-fast file transfers over your local WiFi network.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🔒</div>
+                <h3>FTPS Encryption</h3>
+                <p>Secure your transfers with SSL/TLS encryption. Your files are protected with military-grade security.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🛡️</div>
+                <h3>Complete Privacy</h3>
+                <p>Zero data collection, zero analytics, zero tracking. Everything runs locally on your device.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">📁</div>
+                <h3>Custom Home Folder</h3>
+                <p>Choose exactly which folders to share. Full control over what your FTP clients can access.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">👥</div>
+                <h3>Multiple Connections</h3>
+                <p>Support multiple simultaneous client connections with real-time monitoring and statistics.</p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful UI</h3>
+                <p>Modern Material Design with dark mode support. A clean, intuitive interface you'll love to use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free vs Pro Section -->
+    <section class="section comparison-section" id="pro-features">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">Comparison</span>
+            <h2 class="section-title">Free vs Pro Features</h2>
+            <p class="section-desc">Unlock advanced administration capabilities with the App Pro mode.</p>
+        </div>
+
+        <div class="comparison-wrapper animate-on-scroll">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Free Plan</th>
+                        <th>Pro Plan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Basic FTP Connections</strong></td>
+                        <td><span class="check-icon">✓</span> Included</td>
+                        <td><span class="check-icon">✓</span> Included</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Custom User Credentials</strong></td>
+                        <td><span class="check-icon">✓</span> Included</td>
+                        <td><span class="check-icon">✓</span> Included</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Anonymous Session Access</strong></td>
+                        <td><span class="check-icon">✓</span> Included</td>
+                        <td><span class="check-icon">✓</span> Included</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Custom Server Port Number</strong><span class="pro-badge-mini">PRO</span></td>
+                        <td><span class="cross-icon">✗</span> Default Only</td>
+                        <td><span class="check-icon">✓</span> Custom range (1024-65535)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FTPS SSL/TLS Encryption</strong><span class="pro-badge-mini">PRO</span></td>
+                        <td><span class="cross-icon">✗</span> Plaintext Only</td>
+                        <td><span class="check-icon">✓</span> Explicit/Implicit Modes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Home Folder Customization</strong><span class="pro-badge-mini">PRO</span></td>
+                        <td><span class="cross-icon">✗</span> Default Storage</td>
+                        <td><span class="check-icon">✓</span> Select custom directory</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Connection Limit Control</strong><span class="pro-badge-mini">PRO</span></td>
+                        <td><span class="cross-icon">✗</span> Default limit</td>
+                        <td><span class="check-icon">✓</span> Custom limit setup</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Connection & Idle Timeouts</strong><span class="pro-badge-mini">PRO</span></td>
+                        <td><span class="cross-icon">✗</span> System timeouts</td>
+                        <td><span class="check-icon">✓</span> Full customized control</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">How It Works</span>
+            <h2 class="section-title">Up and Running in Seconds</h2>
+            <p class="section-desc">No complex setup required. Just three simple steps.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card animate-on-scroll">
+                <div class="step-number">1</div>
+                <h3>Install the App</h3>
+                <p>Download the Air FTP Server app and launch it on your Android device.</p>
+            </div>
+
+            <div class="step-card animate-on-scroll">
+                <div class="step-number">2</div>
+                <h3>Start the Server</h3>
+                <p>Tap the power button to start your FTP server. The app displays connection details.</p>
+            </div>
+
+            <div class="step-card animate-on-scroll">
+                <div class="step-number">3</div>
+                <h3>Connect & Transfer</h3>
+                <p>Use any FTP client on your PC to connect and transfer files wirelessly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="download">
+        <div class="cta-box animate-on-scroll">
+            <h2>Ready to Start Sharing Files?</h2>
+            <p>Download Air FTP Server today and turn your phone into a powerful wireless file server.</p>
+            <a href="https://github.com/Kisu06/Air-FTP-Server/releases" class="btn-primary" id="ctaDownloadBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download APK
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <svg viewBox="0 0 108 108" fill="none" width="28" height="28">
+                    <circle cx="54" cy="54" r="50" fill="#2196F3"/>
+                    <path d="M30,40 L78,40 L78,68 L30,68 Z M40,50 L68,50 L68,58 L40,58 Z" fill-rule="evenodd" fill="white"/>
+                </svg>
+                Air FTP Server
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="mailto:hello@ksnxrl.dev">Contact</a></li>
+                <li><a href="https://github.com/Kisu06/Air-FTP-Server" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+
+            <span class="footer-copy">&copy; 2026 KSNXRL. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
