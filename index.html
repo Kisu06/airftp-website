@@ -97,74 +97,144 @@
             <!-- Right: Interactive App Preview Mockup -->
             <div class="hero-visual">
                 <div class="phone-mockup">
-                    <div class="screen-header">
-                        <div class="screen-title">
-                            <img src="logo.png" alt="Air FTP Logo" style="width: 24px; height: 24px; border-radius: 6px;">
-                            Air FTP Server
+                    
+                    <!-- Phone Status Bar -->
+                    <div class="phone-status-bar">
+                        <span class="phone-time">5:05</span>
+                        <div class="phone-status-icons">
+                            <!-- WiFi icon SVG -->
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: #000000;">
+                                <path d="M12 21l-12-12c5-5 19-5 24 0z"/>
+                            </svg>
+                            <!-- Battery icon SVG -->
+                            <svg width="16" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: #000000;">
+                                <rect x="1" y="6" width="18" height="12" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <rect x="3" y="8" width="14" height="8" fill="currentColor"/>
+                                <path d="M20 10h2v4h-2z" fill="currentColor"/>
+                            </svg>
                         </div>
-                        <!-- Settings Icon Link Simulation -->
-                        <div style="cursor: pointer; opacity: 0.8;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                <circle cx="12" cy="12" r="3"></circle>
-                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </div>
+
+                    <!-- App Title Bar -->
+                    <div class="phone-app-bar">
+                        <span class="app-bar-title">Air FTP Server</span>
+                        <div class="app-bar-actions">
+                            <!-- Settings/Wrench icon SVG -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="action-icon">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                            <!-- 3-dot Menu Icon SVG -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="action-icon">
+                                <circle cx="12" cy="5" r="1.5" fill="currentColor"></circle>
+                                <circle cx="12" cy="12" r="1.5" fill="currentColor"></circle>
+                                <circle cx="12" cy="19" r="1.5" fill="currentColor"></circle>
                             </svg>
                         </div>
                     </div>
                     
                     <div class="screen-body">
-                        <!-- Server Status Card (Interactive) -->
-                        <div class="mock-status-card" id="mockStatusCard">
-                            <span class="status-indicator" id="mockStatusText">
-                                <span class="status-dot"></span>
-                                Server Running
-                            </span>
+                        
+                        <!-- 1. Server Status Card -->
+                        <div class="app-card status-card">
+                            <div class="card-label">Server Status</div>
+                            <div class="status-value running" id="mockStatusVal">Running</div>
+                            
+                            <div class="card-row" style="margin-top: 12px;">
+                                <span class="row-label">WiFi Status</span>
+                                <span class="row-value wifi-enabled">Enabled</span>
+                            </div>
+                            <div class="card-row">
+                                <span class="row-label">IP Address</span>
+                                <span class="row-value font-mono">10.0.2.16</span>
+                            </div>
+                            <div class="card-row" style="margin-bottom: 16px;">
+                                <span class="row-label">Network</span>
+                                <span class="row-value font-bold">&lt;unknown ssid&gt;</span>
+                            </div>
+
+                            <!-- Start/Stop Server Button -->
+                            <button class="app-main-btn" id="mockActionBtn">
+                                <span class="btn-content-wrapper" id="mockBtnContent">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon" style="width:16px; height:16px;">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                    Stop Server
+                                </span>
+                            </button>
                         </div>
                         
-                        <!-- Server Details -->
-                        <div class="mock-info-card">
-                            <div class="mock-info-label">Server URL</div>
-                            <div class="mock-info-value" id="mockServerUrl">ftp://192.168.1.102:2121</div>
-                        </div>
+                        <!-- 2. State-dependent Cards Container -->
+                        <div id="mockDynamicContainer" style="display: flex; flex-direction: column; gap: 14px; width: 100%;">
+                            
+                            <!-- RUNNING STATE CARDS (Initial) -->
+                            <!-- Server Details Card -->
+                            <div class="app-card details-card" id="mockDetailsCard">
+                                <div class="card-title">Server Details</div>
+                                
+                                <div class="card-row">
+                                    <span class="row-label">Server URL</span>
+                                    <span class="row-value font-mono text-primary font-bold" id="mockServerUrl">ftp://10.0.2.16:2221</span>
+                                </div>
+                                <div class="card-row">
+                                    <span class="row-label">User ID</span>
+                                    <span class="row-value font-bold">admin</span>
+                                </div>
+                                <div class="card-row">
+                                    <span class="row-label">Password</span>
+                                    <span class="row-value font-mono">••••••</span>
+                                </div>
+                                <div class="card-row">
+                                    <span class="row-label">Anonymous Access</span>
+                                    <span class="row-value font-bold">Disabled</span>
+                                </div>
+                                <div class="card-row" style="margin-bottom: 14px;">
+                                    <span class="row-label">Root Folder</span>
+                                    <span class="row-value font-bold">Default</span>
+                                </div>
 
-                        <!-- Credentials -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                            <div class="mock-info-card">
-                                <div class="mock-info-label">User ID</div>
-                                <div class="mock-info-value" style="color: white;" id="mockUser">admin</div>
+                                <button class="app-secondary-btn" id="mockCopyUrlBtn">Copy URL</button>
                             </div>
-                            <div class="mock-info-card">
-                                <div class="mock-info-label">Password</div>
-                                <div class="mock-info-value" style="color: white;">••••••••</div>
-                            </div>
-                        </div>
 
-                        <!-- Scan QR Connection -->
-                        <div class="mock-info-card" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
-                            <div class="mock-info-label">Scan to Connect</div>
-                            <!-- Mock QR Code in SVG -->
-                            <svg width="80" height="80" viewBox="0 0 24 24" fill="white" style="opacity: 0.85;">
-                                <path d="M3 3h6v6H3zm2 2v2h2V5zm8-2h6v6h-6zm2 2v2h2V5zM3 15h6v6H3zm2 2v2h2v-2zm10-2h2v2h-2zm2 2h2v2h-2zm-2 2h2v2h-2zm4-4h2v6h-2z"/>
-                            </svg>
-                        </div>
-
-                        <!-- Interactive Stop/Start Trigger -->
-                        <button class="mock-power-btn" id="mockPowerBtn">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"/>
-                            </svg>
-                        </button>
-
-                        <!-- Real-time Stats Grid -->
-                        <div class="mock-stats-grid">
-                            <div class="mock-stat-box">
-                                <div class="mock-stat-num" id="mockUpload">12.8 MB/s</div>
-                                <div class="mock-stat-lbl">Upload</div>
-                            </div>
-                            <div class="mock-stat-box">
-                                <div class="mock-stat-num" id="mockDownload">1.4 MB/s</div>
-                                <div class="mock-stat-lbl">Download</div>
+                            <!-- QR Code Card -->
+                            <div class="app-card qr-card" id="mockQrCard" style="text-align: center;">
+                                <div class="card-title" style="margin-bottom: 12px; font-size: 0.8rem; font-weight: 700; color: #64748B;">Scan QR Code to Connect</div>
+                                <!-- Clean Vector QR Code -->
+                                <svg width="110" height="110" viewBox="0 0 29 29" fill="black" style="margin: 0 auto; display: block; background: white; padding: 6px; border: 1px solid #E2E8F0; border-radius: 4px;">
+                                    <path d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm6-2h1v1H8zm1 1h1v1H9zm-1 1h2v1H8zm2-3h1v1h-1zm2 0h1v1h-1zm1 1h3v1h-3zm0 1h1v1h-1zm2 0h1v1h-1zm-3 1h2v1h-2zm3 0h1v1h-1zm-3 1h1v1h-1zm1 1h2v1h-2zm-3-2h1v1h-1zm0 2h1v1h-1zm-1-1h1v1h-1zm7 2h1v1h-1zm1-5h1v1h-1zm2 1h1v1h-1zm-1 1h1v1h-1zm1 1h1v1h-1zm-2 1h1v1h-1zm3-4h1v1h-1zm0 2h1v1h-1zm0 2h1v1h-1zm2-4h1v1h-1zm-1 1h1v1h-1zm1 1h1v1h-1zm-1 1h1v1h-1zm1 1h1v1h-1zm2-5h7v7h-7zm1 1v5h5V23zm1 1h3v3H24zm-14-1H9v1h1zm-1 1H8v1h1zm2-2H9v1h2zm1 2h-1v1h1zm-2 1h1v1H9zm3-3h-1v1h1zm-1 1h-1v1h1zm2 2h-1v1h1zM0 22h7v7H0zm1 1v5h5v-5zm1 1h3v3H2z"/>
+                                </svg>
                             </div>
                         </div>
+
+                        <!-- STOPPED STATE CARDS (Hidden Initially) -->
+                        <div id="mockStoppedContainer" style="display: none; flex-direction: column; gap: 14px; width: 100%;">
+                            <!-- Transfer Statistics Card -->
+                            <div class="app-card stats-card" id="mockStatsCard">
+                                <div class="card-title">Transfer Statistics</div>
+                                <div class="stats-grid">
+                                    <div class="stat-col">
+                                        <span class="stat-label">Files Uploaded</span>
+                                        <span class="stat-num" id="mockUploadVal">0</span>
+                                    </div>
+                                    <div class="stat-col">
+                                        <span class="stat-label">Files Downloaded</span>
+                                        <span class="stat-num" id="mockDownloadVal">0</span>
+                                    </div>
+                                </div>
+                                <div style="height: 1px; background: #E2E8F0; margin: 12px 0;"></div>
+                                <div class="card-row">
+                                    <span class="row-label">Total Transferred</span>
+                                    <span class="row-value font-bold text-primary font-mono" id="mockTotalVal">0.00 MB</span>
+                                </div>
+                            </div>
+
+                            <!-- Connected Clients Card -->
+                            <div class="app-card clients-card" id="mockClientsCard">
+                                <div class="card-title">Connected Clients</div>
+                                <div class="clients-empty">No active connections</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -365,12 +365,12 @@ a:hover {
 }
 
 .phone-mockup {
-    width: 320px;
+    width: 310px;
     height: 640px;
-    background: #0d1222;
-    border: 12px solid #1e293b;
-    border-radius: 40px;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 40px rgba(33, 150, 243, 0.2);
+    background: #F8FAFC;
+    border: 10px solid #1e293b;
+    border-radius: 38px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5), 0 0 40px rgba(33, 150, 243, 0.25);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -384,166 +384,239 @@ a:hover {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 140px;
-    height: 25px;
+    width: 120px;
+    height: 22px;
     background: #1e293b;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
     z-index: 10;
 }
 
-/* Phone Screen UI */
-.screen-header {
-    background: #121a2e;
-    padding: 36px 16px 12px;
+/* Phone Status Bar */
+.phone-status-bar {
+    padding: 24px 16px 8px;
+    background: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.72rem;
+    color: #000000;
+    font-weight: 600;
+    font-family: inherit;
+    z-index: 5;
 }
 
-.screen-title {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--text);
+.phone-status-icons {
     display: flex;
+    gap: 6px;
     align-items: center;
-    gap: 8px;
 }
 
-.screen-title svg {
-    width: 20px;
-    height: 20px;
+/* Phone App Bar */
+.phone-app-bar {
+    background: #FFFFFF;
+    padding: 8px 16px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E2E8F0;
+    z-index: 5;
 }
 
+.app-bar-title {
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.app-bar-actions {
+    display: flex;
+    gap: 16px;
+    color: #64748B;
+}
+
+.action-icon {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-icon:hover {
+    color: #000000;
+}
+
+/* Screen Body */
 .screen-body {
     flex: 1;
-    padding: 16px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     overflow-y: auto;
+    text-align: left;
 }
 
-/* Status Card */
-.mock-status-card {
-    background: rgba(76, 175, 80, 0.08);
-    border: 1px solid rgba(76, 175, 80, 0.25);
-    border-radius: var(--radius-sm);
-    padding: 14px;
-    text-align: center;
+/* Sleek light card layouts matching screenshots */
+.app-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
     transition: var(--transition);
 }
 
-.mock-status-card.stopped {
-    background: rgba(239, 68, 68, 0.08);
-    border-color: rgba(239, 68, 68, 0.25);
+.card-label {
+    font-size: 0.72rem;
+    color: #64748B;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: none;
 }
 
-.status-indicator {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #4CAF50;
-    text-transform: uppercase;
+.status-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
 }
 
-.mock-status-card.stopped .status-indicator {
+.status-value.stopped {
     color: #ef4444;
 }
 
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background: #4CAF50;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #4CAF50;
+.status-value.running {
+    color: #34C759;
 }
 
-.mock-status-card.stopped .status-dot {
-    background: #ef4444;
-    box-shadow: none;
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.78rem;
 }
 
-/* Server URL Card */
-.mock-info-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: var(--radius-sm);
-    padding: 16px;
+.card-row:last-of-type {
+    margin-bottom: 0;
 }
 
-.mock-info-label {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    margin-bottom: 4px;
+.row-label {
+    color: #64748B;
+    font-weight: 500;
 }
 
-.mock-info-value {
-    font-family: monospace;
-    font-size: 0.95rem;
-    color: var(--accent);
+.row-value {
+    color: #0F172A;
     font-weight: 600;
-    word-break: break-all;
 }
 
-/* Toggle Power Button */
-.mock-power-btn {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #2196F3 0%, #00BCD4 100%);
-    box-shadow: 0 8px 24px rgba(33, 150, 243, 0.3);
-    margin: 12px auto;
+.row-value.wifi-enabled {
+    color: #34C759;
+}
+
+.row-value.font-mono {
+    font-family: monospace;
+    font-size: 0.82rem;
+}
+
+.row-value.font-bold {
+    font-weight: 700;
+}
+
+.row-value.text-primary {
+    color: #2196F3;
+}
+
+/* Real blue Android button */
+.app-main-btn {
+    background: #2196F3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 11px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.app-main-btn:hover {
+    background: #1E88E5;
+}
+
+.btn-content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Secondary Action Card and button */
+.card-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 12px;
+}
+
+.app-secondary-btn {
+    background: #FFFFFF;
+    color: #2196F3;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 0.78rem;
     cursor: pointer;
-    transition: var(--transition);
-    border: none;
-    color: white;
+    transition: all 0.2s;
+    text-align: center;
+    width: 100%;
 }
 
-.mock-power-btn:hover {
-    transform: scale(1.05);
+.app-secondary-btn:hover {
+    background: #F8FAFC;
+    border-color: #2196F3;
 }
 
-.mock-power-btn svg {
-    width: 36px;
-    height: 36px;
-}
-
-.mock-power-btn.stopped {
-    background: #334155;
-    box-shadow: none;
-}
-
-/* Real-time Stats Inside Mockup */
-.mock-stats-grid {
+/* Stats Card details */
+.stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+    margin-bottom: 6px;
 }
 
-.mock-stat-box {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
+.stat-col {
+    display: flex;
+    flex-direction: column;
 }
 
-.mock-stat-num {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text);
-}
-
-.mock-stat-lbl {
+.stat-col .stat-label {
     font-size: 0.7rem;
-    color: var(--text-muted);
+    color: #64748B;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.stat-col .stat-num {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.clients-empty {
+    font-size: 0.76rem;
+    color: #64748B;
+    text-align: left;
 }
 
 /* ── Stats Bar ── */

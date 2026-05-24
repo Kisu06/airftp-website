@@ -98,56 +98,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Interactive Phone Mockup Simulation
-    const mockPowerBtn = document.getElementById('mockPowerBtn');
-    const mockStatusCard = document.getElementById('mockStatusCard');
-    const mockStatusText = document.getElementById('mockStatusText');
-    const mockServerUrl = document.getElementById('mockServerUrl');
-    const mockUpload = document.getElementById('mockUpload');
-    const mockDownload = document.getElementById('mockDownload');
+    // 5. Interactive Phone Mockup Simulation (100% Screenshot Match)
+    const mockActionBtn = document.getElementById('mockActionBtn');
+    const mockStatusVal = document.getElementById('mockStatusVal');
+    const mockBtnContent = document.getElementById('mockBtnContent');
+    const mockDynamicContainer = document.getElementById('mockDynamicContainer');
+    const mockStoppedContainer = document.getElementById('mockStoppedContainer');
+    const mockCopyUrlBtn = document.getElementById('mockCopyUrlBtn');
 
     let isServerRunning = true;
-    let statsInterval = null;
 
-    function startStatsSimulation() {
-        statsInterval = setInterval(() => {
-            if (isServerRunning) {
-                const upSpeed = (Math.random() * 15).toFixed(1);
-                const downSpeed = (Math.random() * 3).toFixed(1);
-                mockUpload.textContent = `${upSpeed} MB/s`;
-                mockDownload.textContent = `${downSpeed} MB/s`;
-            }
-        }, 1500);
-    }
-
-    if (mockPowerBtn) {
-        // Start simulation initially
-        startStatsSimulation();
-
-        mockPowerBtn.addEventListener('click', () => {
+    if (mockActionBtn) {
+        mockActionBtn.addEventListener('click', () => {
             isServerRunning = !isServerRunning;
             
             if (isServerRunning) {
-                // Turn Server ON
-                mockPowerBtn.classList.remove('stopped');
-                mockStatusCard.classList.remove('stopped');
-                mockStatusText.innerHTML = '<span class="status-dot"></span> Server Running';
-                mockStatusText.style.color = '#4CAF50';
-                mockServerUrl.textContent = 'ftp://192.168.1.102:2121';
-                mockUpload.textContent = '12.8 MB/s';
-                mockDownload.textContent = '1.4 MB/s';
-                startStatsSimulation();
+                // Change to RUNNING State
+                mockStatusVal.textContent = 'Running';
+                mockStatusVal.className = 'status-value running';
+                mockBtnContent.innerHTML = `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon" style="width:16px; height:16px;">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                    Stop Server
+                `;
+                mockDynamicContainer.style.display = 'flex';
+                mockStoppedContainer.style.display = 'none';
             } else {
-                // Turn Server OFF
-                mockPowerBtn.classList.add('stopped');
-                mockStatusCard.classList.add('stopped');
-                mockStatusText.innerHTML = '<span class="status-dot" style="background:#ef4444; box-shadow:none;"></span> Server Stopped';
-                mockStatusText.style.color = '#ef4444';
-                mockServerUrl.textContent = '—';
-                mockUpload.textContent = '0.0 KB/s';
-                mockDownload.textContent = '0.0 KB/s';
-                clearInterval(statsInterval);
+                // Change to STOPPED State
+                mockStatusVal.textContent = 'Stopped';
+                mockStatusVal.className = 'status-value stopped';
+                mockBtnContent.innerHTML = `
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="btn-icon" style="width:16px; height:16px;">
+                        <path d="M12 3v13M5 10l7-7 7 7M4 21h16"/>
+                    </svg>
+                    Start Server
+                `;
+                mockDynamicContainer.style.display = 'none';
+                mockStoppedContainer.style.display = 'flex';
             }
+        });
+    }
+
+    if (mockCopyUrlBtn) {
+        mockCopyUrlBtn.addEventListener('click', () => {
+            const originalText = mockCopyUrlBtn.textContent;
+            mockCopyUrlBtn.textContent = 'Copied!';
+            mockCopyUrlBtn.style.color = '#34C759';
+            mockCopyUrlBtn.style.borderColor = '#34C759';
+            
+            setTimeout(() => {
+                mockCopyUrlBtn.textContent = originalText;
+                mockCopyUrlBtn.style.color = '#2196F3';
+                mockCopyUrlBtn.style.borderColor = '#E2E8F0';
+            }, 1500);
         });
     }
 });
