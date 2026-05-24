@@ -39,4 +39,4 @@ This is a completely static website and is pre-configured to be hosted for free 
 
 ## 📄 License & Credits
 
-Built with ❤️ by **KSNXRL** for [Air FTP Server](https://github.com/Kisu06/Air-FTP-Server).
+Built with ❤️ by **KSNXRL** for **Air FTP Server**.
