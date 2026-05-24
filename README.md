@@ -40,3 +40,9 @@ This is a completely static website and is pre-configured to be hosted for free 
 ## 📄 License & Credits
 
 Built with ❤️ by **KSNXRL** for **Air FTP Server**.
+
+---
+
+## 🌟 Collaborative Development Achievement
+
+This repository was developed via collaborative pair-programming! A co-authored commit has been merged into `main` to celebrate open source engineering partnerships and unlock the **Pair Extraordinaire** GitHub profile achievement badge.
