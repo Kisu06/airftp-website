@@ -151,8 +151,29 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 mockCopyUrlBtn.textContent = originalText;
                 mockCopyUrlBtn.style.color = '#2196F3';
-                mockCopyUrlBtn.style.borderColor = '#E2E8F0';
+                mockCopyUrlBtn.style.borderColor = 'var(--border-color)';
             }, 1500);
         });
     }
+
+    // 6. Smooth scroll on load and automatically wipe hash from browser address bar
+    if (window.location.hash) {
+        const targetId = window.location.hash;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const navbarHeight = navbar ? navbar.offsetHeight : 80;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    // Instantly and smoothly erase the hash (#) from the browser address bar!
+                    history.replaceState("", document.title, window.location.pathname + window.location.search);
+                }, 300);
+            });
+        }
+    }
 });
+
